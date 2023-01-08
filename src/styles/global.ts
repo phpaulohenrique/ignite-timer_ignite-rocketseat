@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -9,12 +9,12 @@ export const GlobalStyle = createGlobalStyle`
 
     :focus{
         outline: none;
-        box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']}
+        box-shadow: 0 0 0 2px ${(props) => props.theme["green-500"]}
     }
 
     body{
-        background-color: ${(props) => props.theme['gray-900']};
-        color:${(props) => props.theme['gray-300']};
+        background-color: ${(props) => props.theme["gray-900"]};
+        color:${(props) => props.theme["gray-300"]};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -25,23 +25,35 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
 
+    @media (max-width: 1080px) {
+        html {
+            font-size: 93.75%;
+        }
+    }
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
     *::-webkit-scrollbar {
-        /* width: 4px; */
-        height: 8px;
+        width: 5px;
+        height: 5px;
 
     }
 
     *::-webkit-scrollbar-track {
-    background-color: ${(props) => props.theme['gray-600']};
+    background-color: ${(props) => props.theme["gray-600"]};
     border-radius: 5px;
 
     }
 
 
     *::-webkit-scrollbar-thumb {
-        background-color: ${(props) => props.theme['gray-900']};
+        background-color: ${(props) => props.theme["gray-900"]};
         border-radius: 5px;
-        border: 1px solid ${(props) => props.theme['gray-800']};
+        border: 1px solid ${(props) => props.theme["gray-800"]};
     }
 
-`
+`;

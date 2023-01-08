@@ -1,7 +1,9 @@
 {
-    "extends": "@rocketseat/eslint-config/react"
-    // "rules": {
-    //     "indent": ["error", 4]
-        
-    // }
+    "extends": "@rocketseat/eslint-config/react",
+    "rules": {
+    "no-unused-vars": "off",
+    "prettier/prettier": ["error", {
+        "tabWidth": 4
+    }]}
+    
 }
